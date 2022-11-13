@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f7f7f7;
+}
+.wrapper {
+  background: #fff;
+  width: 450px;
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+}
+.form {
+  padding: 25px 30px;
+}
+.form header {
+  font-size: 25px;
+  font-weight: 600px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.form form {
+  margin: 20px 0;
+}
+.form form .error_zone {
+  color: #721c24;
+  background: #f8d7da;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #f5c6cb;
+  display: none;
+}
+.form form .name-details {
+  display: flex;
+}
+.form form .name-details .field:first-child {
+  margin-right: 10px;
+}
+.form form .name-details .field:last-child {
+  margin-left: 10px;
+}
+.form form .field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  position: relative;
+}
+.form form .field input {
+  outline: none;
+  height: 35px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.form form .field .input input {
+  height: 450px;
+  width: 100%;
+
+  padding: 0 10px;
+
+  border-radius: 5px;
+}
+.form form .field label {
+  margin-bottom: 2px;
+}
+.form form .image input {
+  font-size: 15px;
+  border: none;
+}
+.form form .button input {
+  margin-top: 10px;
+  height: 35px;
+  border: none;
+  color: #fff;
+  background: #333;
+  cursor: pointer;
+  border-radius: 7px;
+}
+.form .link {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 17px;
+  color: #333;
+}
+.form .link a:hover {
+  text-decoration: underline;
+}
+.form form .field i {
+  position: absolute;
+  color: #ccc;
+  right: 15px;
+  top: 70%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.form form .field i.active::before {
+  content: "\f070";
+  color: #333;
+}
+/* code css du profil */
+.users {
+  padding: 25px 30px;
+}
+.users header,
+.user_list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 20px;
+}
+.wrapper img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+.users header .content img {
+  height: 50px;
+  width: 50px;
+}
+:is(.users, .user_list) .content {
+  display: flex;
+  align-items: center;
+}
+:is(.users, .user_list) .details {
+  margin-left: 15px;
+  color: #000;
+}
+.users header .details span {
+  font-size: 18px;
+  font-weight: 500;
+}
+.users header .logout {
+  background: #333;
+  color: #fff;
+  padding: 7px 15px;
+  font-size: 17px;
+  border-radius: 5px;
+}
+.users .search {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.users .search .text {
+  font-size: 12px;
+  margin-top: 10px;
+  text-align: center;
+}
+.users .search input {
+  position: absolute;
+  height: 42px;
+  border: 1px solid #ccc;
+  padding: 0 13px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: calc(100% - 50px);
+  outline: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.users .search input.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.users .search button.active {
+  color: #333;
+  background-color: #fff;
+}
+.users .search button.active i::before {
+  content: "\f00d";
+}
+.users .search button {
+  width: 47px;
+  height: 42px;
+  border: none;
+  color: #fff;
+  background: #333;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.user_list {
+  max-height: 350px;
+  overflow-y: au;
+}
+:is(.user_list, .chat-box)::-webkit-scrollbar {
+  width: 0px;
+}
+.user_list a {
+  padding-right: 15px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  border-bottom-color: #f1f1f1;
+}
+.user_list a:last-child {
+  border: none;
+  margin-bottom: 0px;
+}
+.user_list a img {
+  height: 40px;
+  width: 40px;
+}
+.user_list a .en-ligne {
+  font-size: 12px;
+  color: #35b97c;
+}
+/*utile avec php pour changer le point quand un user va se deconnecter*/
+.user_list a .en-ligne.offline {
+  font-size: 12px;
+  color: #ccc;
+}
+.user_list a .content p {
+  color: #67676a;
+}
+.chat header {
+  display: flex;
+  align-items: center;
+  padding: 18px 30px;
+}
+.chat header img {
+  height: 45px;
+  width: 45px;
+  margin: 0 15px;
+}
+.chat header .back-icon {
+  font-size: 18px;
+  color: #ccc;
+}
+.chat header span {
+  font-size: 17px;
+  font-weight: 500;
+}
+.chat-box {
+  max-height: 470px;
+  background: #f1f1f1;
+  padding: 10px 30px 20px 30px;
+  box-shadow: inset 0 32px 32px -32px rgb(0, 0, 0/5%),
+    inset 0 -32px 32px -32px rgb(0, 0, 0/5%);
+  overflow-y: auto;
+}
+.chat-box .message {
+  margin: 15px 0;
+}
+.chat-box .message p {
+  padding: 8px 16px;
+  word-wrap: break-word;
+}
+.chat-box .entrant {
+  display: flex;
+}
+.entrant .details {
+  max-width: calc(100% - 130px);
+  margin-left: auto;
+}
+.entrant .details p {
+  background: #333;
+  color: #fff;
+  border-radius: 18px 18px 0 18px;
+}
+.chat-box .sortant img {
+  height: 35px;
+  width: 35px;
+}
+.chat-box .sortant {
+  display: flex;
+  align-items: center;
+}
+.sortant .details p {
+  background: #fff;
+  color: #333;
+  border-radius: 18px 18px 18px 0;
+}
+.sortant .details {
+  margin-left: 10px;
+  margin-right: auto;
+  max-width: calc(100% - 130px);
+}
+.chat .saisie {
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.saisie input {
+  height: 45px;
+  width: calc(100% - 58px);
+  font-size: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+.saisie button {
+  width: 55px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background: #333;
+  color: #fff;
+  font-size: 19px;
+  cursor: pointer;
+}

@@ -1,0 +1,12 @@
+
+===============>WARNING<===============
+
+
+when i wrote this code only me and god knew how it worked
+now only god know it
+if y're trying to optimize this routine and failed,
+please increment this counter 
+as a warning to the next person:
+Total_hour_wasted_here: 49;
+
+
