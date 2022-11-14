@@ -5,10 +5,6 @@ if (isset($_SESSION["unique_id"])) {
     $id_sortant = $_POST["id_sortant"];
     $id_entrant = $_POST["id_entrant"];
     $resultat = "";
-    function neRienFaire()
-    {
-        //Rien a l'interieur mdrrrr :-) 
-    }
     $sql = "SELECT * FROM messages m
     LEFT JOIN users u ON u.unique_id = m.id_sms_entrant
     WHERE(id_sms_sortant=$id_sortant AND id_sms_entrant=$id_entrant)

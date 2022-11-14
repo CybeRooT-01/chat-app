@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["unique_id"])) { //si le mec n'est pas connecté et vexu acceder a la page profil, 
-    header("location: ../connexion.php"); //on l'envoie a connexion.php
+    header("location: connexion.php"); //on l'envoie a connexion.php
 }
 ?>
 

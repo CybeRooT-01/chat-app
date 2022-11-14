@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("config.php");
+include_once "config.php";
 $id_sortant = $_SESSION["unique_id"];
 $sql = "SELECT * FROM users WHERE NOT unique_id =:id_sortant"; //selectionne les gens a afficher (en retirant le proprio du compte...)
 $requete = $db->prepare($sql);
@@ -8,7 +8,7 @@ $requete->bindValue("id_sortant", $id_sortant);
 $requete->execute();
 $count = $requete->rowCount();
 $ami = "";
-if ($count == 1) { //s'il ya une seule ligne dans la bd(ce qui veut dire que c'est nous)
+if ($count == 0) { //s'il ya une seule ligne dans la bd(ce qui veut dire que c'est nous)
     $ami .= "Il n'y a personne avec qui vous pouvez discuter";
 } elseif ($count > 0) {
     while ($row = $requete->fetch()) {
@@ -27,7 +27,7 @@ if ($count == 1) { //s'il ya une seule ligne dans la bd(ce qui veut dire que c'e
             $resultat = "Pas de message ";
         }
         //si le message depasse 28 caractere on met les le reste en ...
-        (strlen($resultat) > 28) ? $sms = substr($resultat, 0, 28) . '...' : $sms = $resultat;
+        (strlen($resultat) > 28) ? $sms = substr($resultat, 0, 28) . '...'  : $sms = $resultat;
 
         //detail pour montrer qui a envoyer le dernier message comme sur whatspp... il gueulais trop dnc j'ai mis un @ pour le calmer
         @($id_sortant == $row2["id_sms_entrant"]) ? $vous = "Vous: " : $vous = "";

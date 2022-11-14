@@ -12,7 +12,7 @@ if (isset($_SESSION["unique_id"])) {
         <section class="form login">
             <header>Chat App</header>
             <form action="#">
-                <div class="error_zone">this is an error example</div>
+                <div class="error_zone"></div>
                 <div class="name-details">
                 </div>
                 <div class="field input">
