@@ -35,6 +35,10 @@ if (!empty($nom) && !empty($prenom) && !empty($email) && !empty($pass)) {
                     $time = time();
                     //ona  besoin du temps pour s'assurer que tout les uploads auront un nom unique
                     $new_img_name = $time . $img_name;
+                    //cree le dossier ou on va sauvegarder nos images
+                    if (!file_exists("images")) {
+                        mkdir("images");
+                    }
                     if (move_uploaded_file($tmp_name, "images/" . $new_img_name)) { //si le upload et le depalcement ont ete bien fait
                         $status = "En Ligne"; //imediatement apres son inscription le mec devient online
                         $random_id = rand(time(), 10000000); //cree un id aleatoir pour le user
