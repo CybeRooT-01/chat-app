@@ -8,6 +8,7 @@ if (isset($_SESSION["unique_id"])) {
 <?php include_once("php/header.php"); ?>
 
 <body>
+    <?php include_once("php/button.php"); ?>
     <div class="wrapper">
         <section class="form signup">
             <header>Chat App</header>

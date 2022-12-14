@@ -1,0 +1,17 @@
+.toggler {
+  position: absolute;
+  top: 25px;
+  right: 60px;
+  border-radius: 5px;
+  height: 30px;
+  border: none;
+  padding: 0 5px 0 5px;
+  background: transparent;
+  cursor: pointer;
+  border: 1px solid white;
+  color: white;
+}
+
+.dark {
+  background: aquamarine;
+}

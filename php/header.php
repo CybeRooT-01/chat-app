@@ -11,3 +11,4 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Projet PHP |tchat</title>
 </head>
+<?php include_once("php/button.php"); ?>
